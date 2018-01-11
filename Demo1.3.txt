@@ -1,0 +1,4 @@
+Yhdistin koneen ja pi:n etherenet kaapelilla ja jaoin yhteyden läppäriltäni. arp -a komennolla sain selville pi:n ip 
+192.168.137.16
+
+Tämän jälkeen otin yhteyden puttyllä käyttäen tätä IP osoitetta ja uutta asettamaani salasanaa.

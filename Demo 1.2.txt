@@ -1,0 +1,3 @@
+Vaihdoin raspin salasanan pois oletuksesta sekä laitoin asetukset ja aikavyöhykkeen kuntoon.
+Päivitin raspin tämän jälkeen annetuilla komennoilla. Hain ensiki päivityksen jonka jälkeen erillisellä komennolla suoritin
+itse päivityksen. Lisäsin komennon loppuun -y jotta kaikkiin kysymyksiin vastattaisiin kyllä.
