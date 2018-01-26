@@ -1,0 +1,3 @@
+0 * * * * python home/pi/tunti.py
+
+Käytin crontab -e  komentoa ja Nano editoria
