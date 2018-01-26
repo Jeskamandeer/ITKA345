@@ -1,0 +1,1 @@
+Temp=20.0*C  Humidity=21.0%

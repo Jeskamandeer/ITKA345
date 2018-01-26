@@ -1,0 +1,5 @@
+pusher@collianderjeremias345.iam.gserviceaccount.com
+
+Seurasin n‰it‰ ohjeita, jonka p‰‰tteeksi JSON tiedosto latautui tietokoneelleni.
+Siirsin sen raspille WinSCP avulla.
+http://users.jyu.fi/~helmaaka/opetus/tiea345/2018-kevat/?Drive-autentikointi-ohje#1
