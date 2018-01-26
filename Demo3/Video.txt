@@ -1,3 +1,7 @@
 Käytin videon ottamiseen 
 raspivid -o video35.h264 -t 15000 -w 640 -h 480
 komentoa. Tässä -h ja -w ovat videon korkeus sekä leveys. Pienensin videon siis kokoon 640x480 alkuperäisestä 1920x1080
+
+Linkki videoon
+
+https://m3.jyu.fi/jyumv/Members/hejajeco-40jyu.fi/711124
