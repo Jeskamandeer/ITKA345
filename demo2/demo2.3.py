@@ -22,6 +22,11 @@ GPIO.setup (AUT3, GPIO.OUT)
 GPIO.setup (KAV1, GPIO.OUT)
 GPIO.setup (KAV2, GPIO.OUT)
 
+GPIO.output(KAV1, 1)
+GPIO.output(KAV2, 0)
+GPIO.output(AUT1, 0)
+GPIO.output(AUT2, 0)
+GPIO.output(AUT3, 1)
 		
 
 def vaihdavalot():
