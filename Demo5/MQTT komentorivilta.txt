@@ -1,0 +1,11 @@
+MQTT KOMENTO RIVILTÄ 
+Käytin aluksi
+
+mosquitto_sub -h 192.168.2.12 -t testitopic
+
+komentoa joka yhdisti minut palvelimelle
+ja tämän jälkeen julkaisin viestin
+
+mosquitto_pub -h 192.168.2.12 -t testitopic -m "JERE OLI TAAS TÄÄLÄ"
+
+komennolla
