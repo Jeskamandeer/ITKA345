@@ -2,58 +2,61 @@ import RPi.GPIO as GPIO
 import time
 
 
-KAV1=23
-KAV2=24
+KAVP=20
+KAVV=21
 
-AUT1=4
-AUT2=5
-AUT3=6
+AUTP=4
+AUTK=5
+AUTV=6
 
 painettu=0
-NAPPI=17
+PIR=24
+NAPPI=26
 GPIO.setmode(GPIO.BCM)
 
+GPIO.setup(PIR, GPIO.IN)
 GPIO.setup(NAPPI, GPIO.IN)
 
-GPIO.setup (AUT1, GPIO.OUT)
-GPIO.setup (AUT2, GPIO.OUT)
-GPIO.setup (AUT3, GPIO.OUT)
+GPIO.setup (AUTP, GPIO.OUT)
+GPIO.setup (AUTK, GPIO.OUT)
+GPIO.setup (AUTV, GPIO.OUT)
 
-GPIO.setup (KAV1, GPIO.OUT)
-GPIO.setup (KAV2, GPIO.OUT)
+GPIO.setup (KAVP, GPIO.OUT)
+GPIO.setup (KAVV, GPIO.OUT)
 
-GPIO.output(KAV1, 1)
-GPIO.output(KAV2, 0)
-GPIO.output(AUT1, 0)
-GPIO.output(AUT2, 0)
-GPIO.output(AUT3, 1)
+def normitilanne():
+	GPIO.output(KAVP, 1)
+	GPIO.output(KAVV, 0)
+	GPIO.output(AUTP, 0)
+	GPIO.output(AUTK, 0)
+	GPIO.output(AUTV, 1)
+	painettu = 0
 		
 
 def vaihdavalot():
-	GPIO.output(KAV1, 1)
-	GPIO.output(KAV2, 0)
-	GPIO.output(AUT1, 1)
+	GPIO.output(KAVP, 1)
+	GPIO.output(AUTV, 1)
 	time.sleep (3.0)
-	GPIO.output(AUT1, 0)
-	GPIO.output(AUT2, 1)
+	GPIO.output(AUTV, 0)
+	GPIO.output(AUTK, 1)
 	time.sleep (1.0)
-	GPIO.output(AUT2, 0)
-	GPIO.output(AUT3, 1)
-	GPIO.output(KAV1, 0)
-	GPIO.output(KAV2, 1)
+	GPIO.output(AUTK, 0)
+	GPIO.output(AUTP, 1)
+	GPIO.output(KAVP, 0)
+	GPIO.output(KAVV, 1)
 	time.sleep(3.0)
-	GPIO.output(AUT2, 1)
-	GPIO.output(AUT3, 0)
-	GPIO.output(KAV1, 1)
-	GPIO.output(KAV2, 0)
+	GPIO.output(AUTK, 1)
+	GPIO.output(AUTV, 0)
+	GPIO.output(KAVP, 1)
+	GPIO.output(KAVV, 0)
 	time.sleep (1.0)
-	GPIO.output(AUT1, 1)
-	GPIO.output(AUT2, 0)
+	GPIO.output(AUTV, 1)
+	GPIO.output(AUTK, 0)
 	
 	
 	
 loppu = time.time() + 30
-
+normitilanne()
 while time.time() < loppu:
 	if GPIO.input(NAPPI) == 1:
 		
@@ -61,4 +64,6 @@ while time.time() < loppu:
 			vaihdavalot()
 			
 			painettu = 1
+			normitilanne()
+			painettu = 0
 GPIO.cleanup()
